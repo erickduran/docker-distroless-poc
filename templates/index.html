@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Safe ping pong</title>
+  <!--  stylesheet source: https://codepen.io/oclockvn/pen/MYvVaO -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+  <form method="POST">
+    <div class="wrapper">
+      <input name="text" placeholder="example.com" />
+      <span>address</span>
+      <div class="bar"></div>
+        <div class="button">
+        <input type="submit" value="safe ping">
+      </div>
+    </div>
+  </form>
+  {% if output %}
+  <div class="wrapper">
+    <div class="result">
+      <h1>pong</h1>
+      <div class="text">
+      {{ output }}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</html>
